@@ -1,34 +1,34 @@
-#include<stdio.h>
-#include<conio.h>
-void main()
-{
-clrscr();
-int a[20],i,j,swap,size,temp;
-printf("enter size of array");
-scanf("%d",&size);
-printf("enter element of array");
-for(i=0;i<size;i++)
-scanf("%d",&a[i]);
-//bubble sorting
-for(i=0;i<(size-1);i++)
-{
-	swap=0;
+//bubble sort
 
-	for(j=0;j<(size-i);j++)
-	{
-		if(a[j]>a[j+1])
-		{
-		  temp=a[j];
-		  a[j]=a[j+1];
-		  a[j+1]=temp;
-		  swap=1;
-		}
-	}
-	 if(swap==0)
-	  break;
-}
-printf("array of bubble sort");
-for(i=0;i<size;i++)
-printf("%2d",a[i]);
-getch();
+#include<stdio.h>
+int main(){
+    int i,n,j,temp,value;
+    printf("enter number of number elements in array\n");
+    scanf("%d",&n);
+    int arr[n];
+    printf("\nenter array elements");
+    for(i=0;i<n;i++){
+        scanf("%d",&value);
+        arr[i]=value;
+    }
+    printf("\narray elements\n");
+    for(i=0;i<n;i++){
+        printf("%d",arr[i]);
+    }
+    
+    for(i=0;i<n;i++){
+        for(j=0;j<n-i-1;j++){
+            if (arr[j]>arr[j+1]){
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
+    
+    printf("\nbubble sorted array\n");
+    for(i=0;i<n;i++){
+        printf("%d",arr[i]);
+    }
+    return 0;
 }
