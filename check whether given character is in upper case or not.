@@ -1,0 +1,46 @@
+#include<stdio.h>
+
+#include<conio.h>
+
+int is_lower(char ch)
+
+{  
+  
+ if(ch>=97&&ch<=122)  
+ 
+   return(1);
+
+    else
+  
+  return(0);
+
+    }
+
+int is_lower(char);
+
+char main()
+
+{
+      char ch;
+
+    int ans;
+
+      printf("enter character");
+
+    scanf("%c",&ch);
+
+   ans=is_lower(ch);
+
+    if(ans==1)
+ 
+   printf("it's lower");
+ 
+   else 
+ 
+   printf("it's not lower");
+ 
+   getch();
+ 
+   return(0);
+
+  }
