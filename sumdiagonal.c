@@ -1,8 +1,9 @@
 #include <stdio.h>
 int main()
 {
- int i,j,n,m,a[10][10],sum=0;
+ int i,j,n,m,sum=0;
   scanf("%d",&n);
+ int a[n][n];
   for(i=0;i<n;i++)
   {
     for(j=0;j<n;j++)
